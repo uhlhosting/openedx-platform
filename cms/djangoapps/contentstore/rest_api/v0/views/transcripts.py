@@ -65,6 +65,8 @@ class YoutubeTranscriptCheckView(DeveloperErrorViewMixin, RetrieveAPIView):
     youtube_id: required argument, needed to authorize course authors and identify the video.
     edx_video_id: required argument, needed to identify the transcript.
     xblock_id: required argument, needed to identify the transcript.
+
+    Deprecated. Use GET /api/authoring/v1/courses/{course_key}/youtube_transcript_checks/ instead.
     """
     serializer_class = YoutubeTranscriptCheckSerializer
     parser_classes = (MultiPartParser, FormParser, TypedFileUploadParser)
@@ -83,6 +85,8 @@ class YoutubeTranscriptUploadView(DeveloperErrorViewMixin, RetrieveAPIView):
     public rest API endpoints for the CMS API YouTube transcripts.
     youtube_id: required argument, needed to authorize course authors and identify the video.
     xblock_id: required argument, needed to identify the transcript.
+
+    Deprecated. Use POST /api/authoring/v1/courses/{course_key}/youtube_transcript_imports/ instead.
     """
     serializer_class = YoutubeTranscriptUploadSerializer
     parser_classes = (MultiPartParser, FormParser, TypedFileUploadParser)
